@@ -52,13 +52,13 @@ namespace MyWeather.ViewModels
             }
         }
 
-        bool setDarkBackground = Settings.IsDarkBackground;
+        bool isDarkBackground = Settings.IsDarkbackground;
         public bool IsDarkBackground
         { 
             get { return IsDarkBackground; }
             set
             {
-                SetProperty(ref setDarkBackground, value);
+                SetProperty(ref isDarkBackground, value);
                 Settings.IsDarkbackground = value;
             }
             
@@ -101,7 +101,7 @@ namespace MyWeather.ViewModels
             IsBusy = true;
             try
             {
-                WeatherRoot weatherRoot = null;
+                WeatherMain weatherRoot = null;
                 var units = IsImperial ? Units.Imperial : Units.Metric;
                
 
@@ -152,6 +152,7 @@ namespace MyWeather.ViewModels
             }
         }
 
+        //This method checks to see if  the user has given permission for the app to use their location
         async Task<bool> CheckPermissions()
         {
             var permissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Location);

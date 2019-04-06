@@ -12,7 +12,7 @@ namespace MyWeather
             MainPage = new NavigationPage(new MainTabs())
             {
                 BarBackgroundColor = Color.FromHex("3498db"),
-                BarTextColor = Color.White
+                BarTextColor = Color.AliceBlue
             };
         }
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyWeather.View.WeatherView"
@@ -23,9 +23,14 @@
             <Label Text="Use Imperial" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
             <Switch IsToggled="{Binding IsImperial}"/>
         </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Label Text="Dark Mode" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
+            <Switch IsToggled="{Binding  IsDarkbackground}"/>
+        </StackLayout>
 
 
-        <Button Text="Get Weather" Command="{Binding GetWeatherCommand}"/>
+        <Button Text="Find out if you need an umbrella!" Command="{Binding GetWeatherCommand}"/>
         <Label Text="{Binding Temp}" FontSize="24"/>
         <Label Text="{Binding Condition}"/>
         <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
