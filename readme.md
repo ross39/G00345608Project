@@ -10,5 +10,6 @@ location. It only works if you agree for the app to view your location
 More info can be found on the wiki page
 
 Had an issue with learnonline so I added the pdf of the project spec
+Included is a test plan and outcomes in an excel spreadsheet
 
 I did a git push -u origin master -- force and it has overwritten my commits 
