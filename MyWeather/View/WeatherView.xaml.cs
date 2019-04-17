@@ -10,6 +10,7 @@ namespace MyWeather.View
 
             if (Device.RuntimePlatform != Device.UWP)
                 Icon = new FileImageSource { File = "tab1.png" };
+                
         }
     }
 }
