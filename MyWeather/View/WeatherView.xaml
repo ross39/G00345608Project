@@ -24,10 +24,10 @@
             <Switch IsToggled="{Binding IsImperial}"/>
         </StackLayout>
         
-        <StackLayout Orientation="Horizontal" Spacing="10">
+        <!-- <StackLayout Orientation="Horizontal" Spacing="10">
             <Label Text="Dark Mode" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
             <Switch IsToggled="{Binding  IsDarkbackground}"/>
-        </StackLayout>
+        </StackLayout> -->
 
 
         <Button Text="Find out if you need an umbrella!" Command="{Binding GetWeatherCommand}"/>

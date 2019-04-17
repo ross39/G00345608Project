@@ -13,14 +13,14 @@ namespace MyWeather.Models
         public double Latitude { get; set; } = 0;
     }
 
-    public class Sys
+    public class CountryInfo
     {
 
         [JsonProperty("country")]
         public string Country { get; set; } = string.Empty;
     }
 
-    public class Weather
+    public class WeatherInfo
     {
         [JsonProperty("id")]
         public int Id { get; set; } = 0;
@@ -35,7 +35,7 @@ namespace MyWeather.Models
         public string Icon { get; set; } = string.Empty;
     }
 
-    public class Main
+    public class MainWeatherForecast
     {
         [JsonProperty("temp")]
         public double Temperature { get; set; } = 0;
@@ -68,19 +68,20 @@ namespace MyWeather.Models
         public int CloudinessPercent { get; set; } = 0;
     }
 
-    public class WeatherRoot
+    public class WeatherMain
     {
+        //calls the other methods to retrive the data
         [JsonProperty("coord")]
         public Coord Coordinates { get; set; } = new Coord();
 
         [JsonProperty("sys")]
-        public Sys System { get; set; } = new Sys();
+        public CountryInfo System { get; set; } = new CountryInfo();
 
         [JsonProperty("weather")]
-        public List<Weather> Weather { get; set; } = new List<Weather>();
+        public List<WeatherInfo> Weather { get; set; } = new List<WeatherInfo>();
 
         [JsonProperty("main")]
-        public Main MainWeather { get; set; } = new Main();
+        public MainWeatherForecast MainWeather { get; set; } = new MainWeatherForecast();
 
         [JsonProperty("wind")]
         public Wind Wind { get; set; } = new Wind();
@@ -108,7 +109,7 @@ namespace MyWeather.Models
     public class WeatherForecastRoot
     {
         [JsonProperty("city")]
-        public City City { get; set; }
+        public CityInfo City { get; set; }
         [JsonProperty("cod")]
         public string Vod { get; set; }
         [JsonProperty("message")]
@@ -116,11 +117,11 @@ namespace MyWeather.Models
         [JsonProperty("cnt")]
         public int Cnt { get; set; }
         [JsonProperty("list")]
-        public List<WeatherRoot> Items { get; set; }
+        public List<WeatherMain> Items { get; set; }
 
     }
 
-    public class City
+    public class CityInfo
     {
         [JsonProperty("id")]
         public int Id { get; set; }
@@ -133,7 +134,7 @@ namespace MyWeather.Models
         [JsonProperty("population")]
         public int Population { get; set; }
         [JsonProperty("sys")]
-        public Sys Sys { get; set; }
+        public CountryInfo Sys { get; set; }
     }
 
 }

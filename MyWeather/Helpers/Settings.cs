@@ -4,9 +4,8 @@ using Xamarin.Essentials;
 namespace MyWeather.Helpers
 {
     /// <summary>
-    /// This is the Settings static class that can be used in your Core solution or in any
-    /// of your client applications. All settings are laid out the same exact way with getters
-    /// and setters. 
+    /// This is the code for the settings
+    /// 
     /// </summary>
     public static class Settings
     {
@@ -17,8 +16,8 @@ namespace MyWeather.Helpers
         private static readonly bool IsImperialDefault = true;
 
         //Initially set background to dark
-        private const string IsDarkBackground = "is_darkBackground";
-        private static readonly bool IsDarkBackgroundDefault = false;
+        //private const string IsDarkBackground = "is_darkBackground";
+       //private static readonly bool IsDarkBackgroundDefault = false;
 
 
         private const string UseCityKey = "use_city";
@@ -38,12 +37,12 @@ namespace MyWeather.Helpers
         }
 
 
-        public static bool IsDarkbackground
-        {
-            get => Preferences.Get(IsDarkBackground, IsDarkBackgroundDefault);
-            set => Preferences.Set(IsImperialKey, value);
+        //public static bool IsDarkbackground
+       // {
+           //get => Preferences.Get(IsDarkBackground, IsDarkBackgroundDefault);
+           // set => Preferences.Set(IsImperialKey, value);
 
-        }
+       // }
 
         public static bool UseCity
         {

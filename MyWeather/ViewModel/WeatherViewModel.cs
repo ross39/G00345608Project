@@ -52,17 +52,17 @@ namespace MyWeather.ViewModels
             }
         }
 
-        bool isDarkBackground = Settings.IsDarkbackground;
-        public bool IsDarkBackground
-        { 
-            get { return IsDarkBackground; }
-            set
-            {
-                SetProperty(ref isDarkBackground, value);
-                Settings.IsDarkbackground = value;
-            }
+       //bool isDarkBackground = Settings.IsDarkbackground;
+        //public bool IsDarkBackground
+        //{// 
+          //  get { return IsDarkBackground; }
+           // set
+           // {
+               // SetProperty(ref isDarkBackground, value);
+                //Settings.IsDarkbackground = value;
+            ////
             
-        }
+        //}
 
 
         string temp = string.Empty;
