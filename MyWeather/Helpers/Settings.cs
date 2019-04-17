@@ -28,6 +28,8 @@ namespace MyWeather.Helpers
         private static readonly string CityDefault = "Galway";
 
         #endregion
+            
+            
 
 
         public static bool IsImperial
