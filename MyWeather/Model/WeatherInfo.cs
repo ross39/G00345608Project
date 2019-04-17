@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 
+//All this code deals with is setting up the models for the json data to be read into
 namespace MyWeather.Models
 {
+     //Coordinate model
     public class Coord
     {
         [JsonProperty("lon")]
@@ -12,14 +14,16 @@ namespace MyWeather.Models
         [JsonProperty("lat")]
         public double Latitude { get; set; } = 0;
     }
-
+  
+    //CountryInfo model
     public class CountryInfo
     {
 
         [JsonProperty("country")]
         public string Country { get; set; } = string.Empty;
     }
-
+    
+    //Weather Info model
     public class WeatherInfo
     {
         [JsonProperty("id")]
