@@ -9,4 +9,6 @@ enteres. It also has the ability to retrive the data based on the users
 location. It only works if you agree for the app to view your location
 More info can be found on the wiki page
 
+Had an issue with learnonline so I added the pdf of the project spec
+
 I did a git push -u origin master -- force and it has overwritten my commits 
